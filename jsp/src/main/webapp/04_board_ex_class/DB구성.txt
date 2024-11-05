@@ -1,0 +1,43 @@
+# 테이블 생성
+
+[ Mysql / MariaDB ]
+
+	CREATE TABLE board_ex(
+		seq 	INTEGER auto_increment,	-- 글번호
+		title	varchar(50), 			-- 제목
+		writer  varchar(30), 			-- 작성자
+		content varchar(200),			-- 내용
+		regdate date,					-- 게시일
+		cnt		INTEGER,				-- 조회수
+		pass    varchar(20),  			-- 비밀번호
+		CONSTRAINT pk_board_seq PRIMARY KEY(seq)
+	);
+	
+
+----------------------------------------
+[ Oracle ]
+
+	CREATE TABLE board(
+		seq 	number,			-- 글번호
+		title	varchar2(50), 	-- 제목
+		writer  varchar2(30), 	-- 작성자
+		content varchar2(200),	-- 내용
+		regdate date,			-- 게시일
+		cnt		number,			-- 조회수
+		pass    varchar2(20),  	-- 비밀번호
+		CONSTRAINT pk_board_seq PRIMARY KEY(seq)
+	);
+	
+	CREATE  SEQUENCE  board_seq;
+	
+	
+	
+[댓글 테이블]
+
+테이블명: reply
+댓글번호: 		reply_id	PK(자동증가수)
+게시판글번호	seq			FK(board - seq)
+사용자명		user
+댓글내용 		reply
+
+시퀀스명: seq_reply_id

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+label {
+	color: blue; /* 텍스트 색상 파란색 */
+	
+	
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.form-group {
+    display: flex; /* 두 개의 div를 나란히 배치 */
+}
+
+.form-labels {
+    flex: 1; /* 왼쪽 div 크기 조정 */
+}
+
+.form-inputs {
+    flex: 5; /* 오른쪽 div 크기 조정 */
+}
+
+label {
+    display: block; /* 각 라벨을 블록 요소로 설정하여 세로 정렬 */
+    margin-bottom: 5px; /* 라벨과 입력 간격 */
+}
+
+input{
+	margin:2px
+}

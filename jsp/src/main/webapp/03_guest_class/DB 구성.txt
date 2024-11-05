@@ -1,0 +1,47 @@
+**** 자바에서 데이터베이스 연동 방식 ****
+
+[1] JDBC
+		(1) mysql / mariadb
+			ex) 페이지처리 : limit
+			
+		(2) oracle
+			- 기본 sql문으로 작성 (***수업)
+			- row_number() 이용 (추후 선택) 
+			- hint 이용 (추후 선택) 	
+ 
+[2] Mybatis
+		ex) 페이징처리 : RowBounds
+	
+[3] JPA 
+		ex) Pagable, PageRequest .... 
+
+
+
+
+
+
+
+
+[ MySQL / MariaDB ]
+
+테이블명 : GuestTB
+
+MESSAGE_ID 		INTEGER			메세지번호(PK)	자동증가수
+GUEST_NAME		VARCHAR(10)		손님이름 	NOT NULL
+PASSWORD		VARCHAR(10)		비밀번호	NOT NULL
+MESSAGE			VARCHAR(1024)	메세지		NOT NULL
+
+
+
+-----------------------------------------
+[오라클]
+
+테이블명 : GuestTB
+
+MESSAGE_ID 		NUMBER			메세지번호(PK)	자동증가수
+GUEST_NAME		VARCHAR2(10)	손님이름 	NOT NULL
+PASSWORD		VARCHAR2(10)	비밀번호	NOT NULL
+MESSAGE			VARCHAR2(1024)	메세지		NOT NULL
+
+
+시퀀스명 : seq_guestTb_messageId
